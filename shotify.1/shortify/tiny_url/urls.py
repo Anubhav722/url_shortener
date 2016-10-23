@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^login/', views.user_login, name='login'),
     url(r'^shorten/', views.short, name='shorten'),
     url(r'^logout/$', views.user_logout, name='logout'),
-    url(r'^shorten/(?P<short>[0-9]+[a-z]+[A-Z]+)/$', views.redirect_short_url, name='redirect_short_url'),
+    url(r'^shorten/(?P<short>[0-9,a-z,A-Z]+)/$', views.redirect_short_url, name='redirect_short_url'),
 ]
